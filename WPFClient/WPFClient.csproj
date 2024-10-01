@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Images\IMG_0196.JPG" />
+      <None Remove="Images\IMG_0255.JPG" />
+      <None Remove="Images\IMG_0309.JPG" />
+      <None Remove="Images\IMG_0659.JPG" />
+      <None Remove="Images\IMG_0829.JPG" />
+      <None Remove="Images\IMG_0917.JPG" />
+      <None Remove="Images\IMG_1573s.jpg" />
+      <None Remove="Images\IMG_1603sc.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Images\IMG_0196.JPG" />
+      <Resource Include="Images\IMG_0255.JPG" />
+      <Resource Include="Images\IMG_0309.JPG" />
+      <Resource Include="Images\IMG_0659.JPG" />
+      <Resource Include="Images\IMG_0829.JPG" />
+      <Resource Include="Images\IMG_0917.JPG" />
+      <Resource Include="Images\IMG_1573s.jpg" />
+      <Resource Include="Images\IMG_1603sc.jpg" />
+    </ItemGroup>
+
+</Project>

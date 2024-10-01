@@ -1,0 +1,29 @@
+﻿<Window x:Class="TouchOne.LoggerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Finestra di Log" Height="300" Width="300" ShowInTaskbar="False" Topmost="True"
+        WindowStyle="ToolWindow"
+        Closing="Window_Closing">
+    <Grid>
+        <DockPanel>
+            <!--<Slider x:Name="ZoomLog" DockPanel.Dock="Top" Margin="0,0,10,0" Minimum="0.5" Maximum="4" Value="1" SmallChange="0.1" LargeChange="0.25" TickFrequency="0.5" />-->
+            <StackPanel DockPanel.Dock="Top">
+                <Button Margin="0,0,10,0" Click="Reset_Click">
+                    <AccessText>_Clear</AccessText>
+                </Button>
+                <TextBlock Text="Zoom" VerticalAlignment="Center"/>
+                <Slider x:Name="ZoomLog" DockPanel.Dock="Top" Margin="0,0,10,0" Minimum="10" Maximum="40" Value="1" SmallChange="1" LargeChange="3" TickFrequency="0.5" />
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Visible" Grid.Row="1" >
+                <TextBox x:Name="Logger" IsReadOnly="true" TextWrapping="Wrap" Text="Start" FontFamily="Courier New" FontSize="{Binding ElementName=ZoomLog, Path=Value}">
+                </TextBox>
+
+                <!--<TextBox x:Name="Logger" IsReadOnly="true" TextWrapping="Wrap" Text="Start" FontFamily="Courier New" FontSize="10">
+                    <TextBox.RenderTransform>
+                        <ScaleTransform ScaleX="{Binding ElementName=ZoomLog, Path=Value, Mode=TwoWay}" ScaleY="{Binding ElementName=ZoomLog, Path=Value, Mode=TwoWay}" />
+                    </TextBox.RenderTransform>
+                </TextBox>-->
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>
